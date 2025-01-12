@@ -5,6 +5,7 @@ import {
   FaLaravel,
   FaBootstrap,
   FaPhp,
+  FaGitAlt
 } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 
@@ -17,6 +18,7 @@ function Skill() {
     { icon: <FaLaravel />, name: "Laravel" },
     { icon: <FaBootstrap />, name: "Bootstrap" },
     { icon: <RiTailwindCssFill />, name: "Tailwind" },
+    { icon: <FaGitAlt />, name: "Git" },
   ];
 
   return (

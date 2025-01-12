@@ -1,5 +1,4 @@
-import React from "react";
-import { BsLinkedin, BsGithub, BsInstagram, BsTiktok } from "react-icons/bs";
+import { BsLinkedin, BsGithub, BsInstagram,  } from "react-icons/bs";
 import { BiCloudDownload } from "react-icons/bi";
 import { TypeAnimation } from "react-type-animation";
 
@@ -11,7 +10,7 @@ export default function Home() {
     >
       {/* Bagian Deskripsi */}
       <div className="w-full lg:w-1/2 text-primary mb-10 lg:mb-0">
-        <h1 className="text-4xl font-semibold text-white">Hello I'm </h1>
+        <h1 className="text-4xl font-semibold text-white">Hello I'm 👋 </h1>
         <span
           className="inline-block text-4xl lg:text-5xl font-semibold text-primary text-right lg:whitespace-nowrap"
           style={{ wordSpacing: "-2px" }}
@@ -64,7 +63,7 @@ export default function Home() {
           </a>
 
           <a
-            href=""
+            href="https://drive.google.com/file/d/1xgYWZO-l6RzRw9C5J4B3QeL_8E-GGPX9/view?usp=sharing"
             className="w-48 h-9 rounded-full flex justify-center text-primary items-center border border-primary hover:border-primary hover:bg-primary hover:text-slate-900  transition duration-200"
             target="_blank"
             rel="noopener noreferrer"
@@ -77,13 +76,16 @@ export default function Home() {
       </div>
 
       {/* Bagian Gambar */}
-      <div className="w-full lg:w-1/2 flex justify-center items-center">
-        <img
-          src="img/vektor.png"
-          alt="nug"
-          className="max-w-full h-auto object-contain"
-        />
-      </div>
+      <div className="w-full lg:w-1/2 flex justify-center items-center relative">
+  <div className="absolute w-64 h-64 rounded-full  border-4 border-dashed border-primary animate-spin duration-900"></div>
+  <img
+    src="img/nug.png"
+    alt="nug"
+    className="w-60 h-60 object-contain filter brightness-60 relative"
+  />
+</div>
+
+
     </div>
   );
 }

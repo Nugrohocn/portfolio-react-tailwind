@@ -8,17 +8,17 @@ export default function Portfolio() {
       id: 1,
       judul: "Rekta (Rekomendasi Wisata)",
       deskripsi:
-        "Rekta adalah sebuah sistem rekomendasi yang dirancang untuk membantu pengguna menemukan rekomendasi sesuai dengan preferensi mereka. Sistem ini memanfaatkan metode Knowledge-Based Recommendation untuk memberikan hasil yang relevan dan akurat",
-      bahasa: "Laravel, Bootstrap, Javascript",
+        "Rekta is a recommendation system designed to help users find recommendations tailored to their preferences. This system utilizes the Knowledge-Based Recommendation method to deliver relevant and accurate results.",
+      bahasa: "Laravel, Bootstrap, Javascript, MySQL",
       github:
         "https://github.com/Nugrohocn/Sistem-Rekomendasi-Wisata-Knowledge-Base-Recommendation",
-      gambar: "img/portofolio/Rekomendasi.png",
+      gambar: "img/portofolio/rekta.png",
     },
     {
       id: 2,
       judul: "Movie Database",
       deskripsi:
-        "Sebuah database film yang dibangun menggunakan TailwindCSS dan memanfaatkan data dari OMDB API untuk menampilkan informasi film secara dinamis.",
+        "A movie database built using TailwindCSS and utilizing data from the OMDB API to dynamically display movie information.",
       bahasa: "HTML, Javascript, TailwindCSS",
       github: "https://github.com/Nugrohocn/movie-database-tailwindCSS",
       gambar: "img/portofolio/movie-database.png",
@@ -27,8 +27,8 @@ export default function Portfolio() {
       id: 3,
       judul: "Poska (Pasar Online Surakarta)",
       deskripsi:
-        "Pasar Online yang dirancang untuk mempermudah masyarakat dalam mencari produk sayuran, sekaligus menghubungkan petani dan pembeli secara online secara efisien.",
-      bahasa: "Codeigniter",
+        "An online marketplace designed to simplify the process of finding vegetable products while efficiently connecting farmers and buyers online.",
+      bahasa: "Codeigniter, MySQL",
       github: "https://github.com/Nugrohocn/project-uas-semester3",
       gambar: "img/portofolio/poska.png",
     },
@@ -36,7 +36,7 @@ export default function Portfolio() {
       id: 4,
       judul: "K-Means Clustering",
       deskripsi:
-        "Aplikasi ini memungkinkan pengguna melakukan clustering data berdasarkan harga, penjualan, dan fitur lainnya. Pengguna dapat menyesuaikan jumlah cluster dan melihat hasilnya secara interaktif, termasuk visualisasi cluster dan centroid.",
+        "This application allows users to perform data clustering based on price, sales, and other features. Users can customize the number of clusters and view the results interactively, including cluster visualizations and centroids.",
       bahasa: "Python",
       github: "https://github.com/Nugrohocn/k-means_Clustering",
       gambar: "img/portofolio/kmeans.png",
@@ -45,7 +45,7 @@ export default function Portfolio() {
       id: 5,
       judul: "Segorogunung Hill Climb",
       deskripsi:
-        "Website wisata yang menyediakan berbagai paket wisata, penginapan, serta fokus pada pengalaman trip menggunakan jeep.",
+        "A tourism website offering various travel packages, accommodations, and focusing on trip experiences using jeeps.",
       bahasa: "HTML, CSS",
       github: "https://github.com/Nugrohocn/Segorogunung-Hill-Climb",
       gambar: "img/portofolio/sgg.png",
@@ -71,7 +71,7 @@ export default function Portfolio() {
         <img
           src={currentPortfolio.gambar}
           alt={currentPortfolio.judul}
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover "
         />
       </div>
 
