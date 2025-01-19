@@ -32,36 +32,23 @@ function Experience() {
             <span className="flex justify-center px-8 py-1 text-xs md:text-sm font-semibold border border-primary rounded-full text-primary">
               Onsite
             </span>
-            <button
-              onClick={toggleDropdown}
-              className="flex justify-center items-center px-8 py-1 text-xs md:text-sm font-semibold border border-primary rounded-full text-primary cursor-pointer"
-            >
-              <BsArrowRight
-                className={`transform transition duration-300 ${
-                  isOpen ? "rotate-90" : ""
-                }`}
-              />
-            </button>
           </div>
 
-          {/* Dropdown */}
-          {isOpen && (
-            <div className="mt-2 p-4 rounded-md shadow-md max-h-28 transition duration-500 w-[350px] md:w-[450px]">
-              <div className="text-sm w-full flex flex-col">
-                <div className="text-sm w-full">
-                  <span>
-                    During my internship, I contributed to designing posters and
-                    banners for company marketing programs, developing websites,
-                    and learning and applying SEO techniques for search engine
-                    optimization. In addition, I also manage and improve website
-                    performance to ensure optimal user experience.
-                  </span>
-                </div>
+          <div className="mt-2 p-4 rounded-md shadow-md  transition duration-500 w-sm md:w-[450px] ">
+            <div className="text-sm w-full flex flex-col">
+              <div className="text-sm w-full ">
+                <span>
+                  During my internship, I contributed to designing posters and
+                  banners for company marketing programs, developing websites,
+                  and learning and applying SEO techniques for search engine
+                  optimization. In addition, I also manage and improve website
+                  performance to ensure optimal user experience.
+                </span>
               </div>
             </div>
-          )}
+          </div>
         </div>
-        <div className="mt-4 md:mt-0">
+        <div className=" mt-4 sm:mt-0">
           <h1 className="text-sm md:text-md">Software Engineer</h1>
           <h1 className="text-lg md:text-2xl font-bold">
             PT Media Sarana Digitalindo

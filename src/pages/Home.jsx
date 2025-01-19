@@ -1,4 +1,4 @@
-import { BsLinkedin, BsGithub, BsInstagram,  } from "react-icons/bs";
+import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
 import { BiCloudDownload } from "react-icons/bi";
 import { TypeAnimation } from "react-type-animation";
 
@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="section container mx-auto max-w-4xl flex items-center justify-center flex-wrap lg:flex-nowrap gap-10 px-5"
+      className="section container mx-auto max-w-4xl flex flex-wrap lg:flex-nowrap items-center justify-center gap-10 px-5"
     >
       {/* Bagian Deskripsi */}
       <div className="w-full lg:w-1/2 text-primary mb-10 lg:mb-0">
         <h1 className="text-4xl font-semibold text-white">Hello I'm 👋 </h1>
         <span
-          className="inline-block text-4xl lg:text-5xl font-semibold text-primary text-right lg:whitespace-nowrap"
+          className="inline-block text-4xl lg:text-5xl font-semibold text-primary text-left lg:text-right lg:whitespace-nowrap"
           style={{ wordSpacing: "-2px" }}
         >
           <TypeAnimation
@@ -24,8 +24,24 @@ export default function Home() {
           />
         </span>
         <h2 className="text-sm font-base text-white lg:text-lg mt-4">
-          Undergraduate Informatics Engineering
+          Undergraduate Informatics Engineering <br />
+          <span className="text-primary text-lg font-semibold">
+            Universitas Duta Bangsa Surakarta
+          </span>
         </h2>
+
+        {/* Gambar Dipindahkan ke Sini */}
+        <div className="w-full flex justify-center items-center mt-5 lg:hidden">
+          <div className="relative">
+            <div className="absolute w-64 h-64 rounded-full border-4 border-dashed border-primary animate-spin duration-900"></div>
+            <img
+              src="img/nug.png"
+              alt="nug"
+              className="w-60 h-60 object-contain filter brightness-60 relative"
+            />
+          </div>
+        </div>
+
         <p className="text-base text-white max-w-xl lg:text-md mt-4">
           I'm passionate about creating innovative solutions and exploring new
           technologies. Welcome to my
@@ -75,17 +91,17 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Bagian Gambar */}
-      <div className="w-full lg:w-1/2 flex justify-center items-center relative">
-  <div className="absolute w-64 h-64 rounded-full  border-4 border-dashed border-primary animate-spin duration-900"></div>
-  <img
-    src="img/nug.png"
-    alt="nug"
-    className="w-60 h-60 object-contain filter brightness-60 relative"
-  />
-</div>
-
-
+      {/* Bagian Gambar (untuk desktop saja) */}
+      <div className="hidden lg:flex w-full lg:w-1/2 justify-center items-center">
+        <div className="relative">
+          <div className="absolute w-64 h-64 rounded-full border-4 border-dashed border-primary animate-spin duration-900"></div>
+          <img
+            src="img/nug.png"
+            alt="nug"
+            className="w-60 h-60 object-contain filter brightness-60 relative"
+          />
+        </div>
+      </div>
     </div>
   );
 }
