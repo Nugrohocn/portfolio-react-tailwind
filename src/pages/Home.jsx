@@ -32,7 +32,7 @@ export default function Home() {
 
         {/* Gambar Dipindahkan ke Sini */}
         <div className="w-full flex justify-center items-center mt-5 lg:hidden">
-          <div className="relative">
+          <div className="relative flex justify-center items-center ">
             <div className="absolute w-64 h-64 rounded-full border-4 border-dashed border-primary animate-spin duration-900"></div>
             <img
               src="img/nug.png"
@@ -93,12 +93,12 @@ export default function Home() {
 
       {/* Bagian Gambar (untuk desktop saja) */}
       <div className="hidden lg:flex w-full lg:w-1/2 justify-center items-center">
-        <div className="relative">
+        <div className="relative flex justify-center items-center  ">
           <div className="absolute w-64 h-64 rounded-full border-4 border-dashed border-primary animate-spin duration-900"></div>
           <img
             src="img/nug.png"
             alt="nug"
-            className="w-60 h-60 object-contain filter brightness-60 relative"
+            className="w-60 h-60 object-contain filter brightness-60 relative "
           />
         </div>
       </div>
