@@ -50,6 +50,15 @@ export default function Portfolio() {
       github: "https://github.com/Nugrohocn/Segorogunung-Hill-Climb",
       gambar: "img/portofolio/sgg.png",
     },
+    {
+      id: 6,
+      judul: "Split Bill",
+      deskripsi:
+        "A web application for splitting the bill among friends, making it easy to manage expenses and ensure everyone pays their fair share.",
+      bahasa: "React JS",
+      github: "https://github.com/Nugrohocn/split-bill-reactJS",
+      gambar: "img/portofolio/Split-Bill.png",
+    },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -67,7 +76,7 @@ export default function Portfolio() {
       className="section container mx-auto max-w-full flex items-center justify-center flex-wrap lg:flex-nowrap gap-10 px-5"
     >
       {/* Bagian Gambar */}
-      <div className="w-full sm:w-1/2 max-w-lg aspect-video overflow-hidden border-2 border-white rounded-xl">
+      <div className=" w-full sm:w-1/2 max-w-lg aspect-video overflow-hidden border-2 border-white rounded-xl">
         <img
           src={currentPortfolio.gambar}
           alt={currentPortfolio.judul}
@@ -82,6 +91,7 @@ export default function Portfolio() {
           <span className="ml-2">PORTFOLIO</span>
         </h1>
         <h1 className="text-3xl font-semibold text-white mb-2">
+          {currentPortfolio.id}. 
           <TypeAnimation
             key={activeIndex} // Menambahkan key agar merender ulang saat activeIndex berubah
             sequence={[currentPortfolio.judul, 3000]}

@@ -25,6 +25,15 @@ function Experience() {
             className="w-full h-full object-cover hover:text-primary"
             alt="Experience"
           />
+
+          <div className=" mt-4 sm:mt-0 lg:hidden">
+            <h1 className="text-sm md:text-md">Software Engineer</h1>
+            <h1 className="text-lg md:text-2xl font-bold">
+              PT Media Sarana Digitalindo
+            </h1>
+            <span className="text-sm">26 Agustus 2024 - 4 Januari 2025</span>
+          </div>
+
           <div className="flex gap-2 mt-4 md:mt-8">
             <span className="flex justify-center px-8 py-1 text-xs md:text-sm font-semibold border border-primary rounded-full text-primary">
               Internship
@@ -48,7 +57,7 @@ function Experience() {
             </div>
           </div>
         </div>
-        <div className=" mt-4 sm:mt-0">
+        <div className=" mt-4 sm:mt-0 hidden">
           <h1 className="text-sm md:text-md">Software Engineer</h1>
           <h1 className="text-lg md:text-2xl font-bold">
             PT Media Sarana Digitalindo
