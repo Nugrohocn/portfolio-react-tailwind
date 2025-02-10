@@ -12,7 +12,7 @@ export default function Portfolio() {
       bahasa: "Laravel, Bootstrap, Javascript, MySQL",
       github:
         "https://github.com/Nugrohocn/Sistem-Rekomendasi-Wisata-Knowledge-Base-Recommendation",
-      gambar: "img/portofolio/rekta.png",
+      gambar: "img/portofolio/rekta-2.png",
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ export default function Portfolio() {
         "A movie database built using TailwindCSS and utilizing data from the OMDB API to dynamically display movie information.",
       bahasa: "HTML, Javascript, TailwindCSS",
       github: "https://github.com/Nugrohocn/movie-database-tailwindCSS",
-      gambar: "img/portofolio/movie-database.png",
+      gambar: "img/portofolio/movie.png",
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ export default function Portfolio() {
         "An online marketplace designed to simplify the process of finding vegetable products while efficiently connecting farmers and buyers online.",
       bahasa: "Codeigniter, MySQL",
       github: "https://github.com/Nugrohocn/project-uas-semester3",
-      gambar: "img/portofolio/poska.png",
+      gambar: "img/portofolio/poska-2.png",
     },
     {
       id: 4,
@@ -39,16 +39,15 @@ export default function Portfolio() {
         "This application allows users to perform data clustering based on price, sales, and other features. Users can customize the number of clusters and view the results interactively, including cluster visualizations and centroids.",
       bahasa: "Python",
       github: "https://github.com/Nugrohocn/k-means_Clustering",
-      gambar: "img/portofolio/kmeans.png",
+      gambar: "img/portofolio/kemans-2.png",
     },
     {
       id: 5,
-      judul: "Segorogunung Hill Climb",
-      deskripsi:
-        "A tourism website offering various travel packages, accommodations, and focusing on trip experiences using jeeps.",
-      bahasa: "HTML, CSS",
-      github: "https://github.com/Nugrohocn/Segorogunung-Hill-Climb",
-      gambar: "img/portofolio/sgg.png",
+      judul: "Smart Village Aikmel",
+      deskripsi: "Population data collection website",
+      bahasa: "Laravel, Tailwind CSS, MySQL",
+      github: "https://github.com/Nugrohocn/",
+      gambar: "img/portofolio/aikmel.png",
     },
     {
       id: 6,
