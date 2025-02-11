@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 import Portfolio from "../pages/Portfolio";
 import Contact from "../pages/Contact";
+import MyPortfolio from "../fragments/MyPortfolio";
 
 export const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <MyPortfolio />,
       },
       {
         path: "/profile",

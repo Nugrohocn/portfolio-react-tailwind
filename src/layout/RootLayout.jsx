@@ -1,60 +1,50 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { BiHomeAlt, BiUser, BiCodeAlt } from "react-icons/bi";
 import { BsTelephone } from "react-icons/bs";
+import { HiOutlinePuzzle } from "react-icons/hi";
 
 export default function Rootlayout() {
+  // Function untuk smooth scroll
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <>
       <div className="min-h-screen pb-16">
-        {" "}
-        {/* Add bottom padding for the navbar */}
-        {/* Main content area */}
         <Outlet />
       </div>
 
-      {/* Fixed navbar */}
-      <div className="fixed bottom-4 left-0 right-0 text-center z-10 lg:right-5">
-        <div className="flex justify-between mx-auto text-primary bg-secondary p-2 rounded-full border-primary border-solid border-[1px] max-w-[250px]">
-          <NavLink
+      {/* Fixed Sidebar Navbar */}
+      <div className="fixed left-20 top-1/2 -translate-y-1/2 text-center z-10">
+        <div className="flex flex-col gap-4 text-white p-2">
+          <button
             className="flex w-[50px] h-[50px] justify-center items-center cursor-pointer"
-            to="/"
-            activeClass="active"
-            offset={-100}
-            smooth={true}
-            spy={true}
+            onClick={() => handleScroll("home")}
           >
             <BiHomeAlt />
-          </NavLink>
-          <NavLink
+          </button>
+          <button
             className="flex w-[50px] h-[50px] justify-center items-center cursor-pointer"
-            to="/profile"
-            activeClass="active"
-            offset={-100}
-            smooth={true}
-            spy={true}
+            onClick={() => handleScroll("experience")}
           >
             <BiUser />
-          </NavLink>
-          <NavLink
+          </button>
+          <button
             className="flex w-[50px] h-[50px] justify-center items-center cursor-pointer"
-            to="/portfolio"
-            activeClass="active"
-            offset={-100}
-            smooth={true}
-            spy={true}
+            onClick={() => handleScroll("portfolio")}
           >
             <BiCodeAlt />
-          </NavLink>
-          <NavLink
+          </button>
+          <button
             className="flex w-[50px] h-[50px] justify-center items-center cursor-pointer"
-            to="/contact"
-            activeClass="active"
-            offset={-100}
-            smooth={true}
-            spy={true}
+            onClick={() => handleScroll("mystack")}
           >
-            <BsTelephone />
-          </NavLink>
+            <HiOutlinePuzzle />
+          </button>
         </div>
       </div>
     </>

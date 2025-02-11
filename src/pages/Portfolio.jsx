@@ -1,131 +1,189 @@
-import React, { useState } from "react";
-import { BsArrowRightSquareFill, BsGithub, BsFileCode } from "react-icons/bs";
-import { TypeAnimation } from "react-type-animation";
+import React from "react";
+import { motion } from "framer-motion";
+import { BiCodeAlt } from "react-icons/bi";
 
 export default function Portfolio() {
   const portfolio = [
     {
       id: 1,
+      judul: "Movie Database",
+      title: "A movie database built using TailwindCSS",
+      github: "https://github.com/Nugrohocn/movie-database-tailwindCSS",
+      gambar: "img/portofolio/movie.png",
+    },
+    {
+      id: 2,
+      judul: "Find Nation",
+      title: "A web application to explore countries",
+      github: "https://github.com/Nugrohocn/find-nation",
+      gambar: "img/portofolio/find.png",
+    },
+    {
+      id: 3,
+      judul: "Split Bill",
+      title: "A web splitting the bill among friends",
+      github: "https://github.com/Nugrohocn/split-bill-reactJS",
+      gambar: "img/portofolio/Split-Bill.png",
+    },
+    {
+      id: 4,
       judul: "Rekta (Rekomendasi Wisata)",
-      deskripsi:
-        "Rekta is a recommendation system designed to help users find recommendations tailored to their preferences. This system utilizes the Knowledge-Based Recommendation method to deliver relevant and accurate results.",
-      bahasa: "Laravel, Bootstrap, Javascript, MySQL",
+      title: "Recommendation system using Knowledge-Based Recommendation",
       github:
         "https://github.com/Nugrohocn/Sistem-Rekomendasi-Wisata-Knowledge-Base-Recommendation",
       gambar: "img/portofolio/rekta-2.png",
     },
     {
-      id: 2,
-      judul: "Movie Database",
-      deskripsi:
-        "A movie database built using TailwindCSS and utilizing data from the OMDB API to dynamically display movie information.",
-      bahasa: "HTML, Javascript, TailwindCSS",
-      github: "https://github.com/Nugrohocn/movie-database-tailwindCSS",
-      gambar: "img/portofolio/movie.png",
-    },
-    {
-      id: 3,
-      judul: "Poska (Pasar Online Surakarta)",
-      deskripsi:
-        "An online marketplace designed to simplify the process of finding vegetable products while efficiently connecting farmers and buyers online.",
-      bahasa: "Codeigniter, MySQL",
-      github: "https://github.com/Nugrohocn/project-uas-semester3",
-      gambar: "img/portofolio/poska-2.png",
-    },
-    {
-      id: 4,
-      judul: "K-Means Clustering",
-      deskripsi:
-        "This application allows users to perform data clustering based on price, sales, and other features. Users can customize the number of clusters and view the results interactively, including cluster visualizations and centroids.",
-      bahasa: "Python",
+      id: 5,
+      judul: "K-Means Clust",
+      title: "Perform data clustering",
       github: "https://github.com/Nugrohocn/k-means_Clustering",
       gambar: "img/portofolio/kemans-2.png",
     },
     {
-      id: 5,
+      id: 6,
       judul: "Smart Village Aikmel",
-      deskripsi: "Population data collection website",
-      bahasa: "Laravel, Tailwind CSS, MySQL",
+      title: "Population data collection website",
       github: "https://github.com/Nugrohocn/",
       gambar: "img/portofolio/aikmel.png",
     },
     {
-      id: 6,
-      judul: "Split Bill",
-      deskripsi:
-        "A web application for splitting the bill among friends, making it easy to manage expenses and ensure everyone pays their fair share.",
-      bahasa: "React JS",
-      github: "https://github.com/Nugrohocn/split-bill-reactJS",
-      gambar: "img/portofolio/Split-Bill.png",
+      id: 7,
+      judul: "Poska (Pasar Online Surakarta)",
+      title: "Online marketplace for vegetable products",
+      github: "https://github.com/Nugrohocn/project-uas-semester3",
+      gambar: "img/portofolio/poska-2.png",
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleNext = () => {
-    // Jika indeks saat ini adalah yang terakhir, kembali ke 0
-    setActiveIndex((prevIndex) => (prevIndex + 1) % portfolio.length);
-  };
-
-  const currentPortfolio = portfolio[activeIndex];
-
   return (
-    <div
-      id="home"
-      className="section container mx-auto max-w-full flex items-center justify-center flex-wrap lg:flex-nowrap gap-10 px-5"
+    <motion.div
+      className="w-full text-white min-h-screen"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { staggerChildren: 0.5 } },
+      }}
     >
-      {/* Bagian Gambar */}
-      <div className=" w-full sm:w-1/2 max-w-lg aspect-video overflow-hidden border-2 border-white rounded-xl">
-        <img
-          src={currentPortfolio.gambar}
-          alt={currentPortfolio.judul}
-          className="w-full h-full object-cover "
-        />
-      </div>
-
-      {/* Bagian Deskripsi */}
-      <div className="w-full sm:w-1/2 text-primary text-center sm:text-left">
-        <h1 className="text-xl text-primary font-bold mb-4 flex justify-center sm:justify-start">
-          <BsFileCode />
-          <span className="ml-2">PORTFOLIO</span>
-        </h1>
-        <h1 className="text-3xl font-semibold text-white mb-2">
-          {currentPortfolio.id}. 
-          <TypeAnimation
-            key={activeIndex} // Menambahkan key agar merender ulang saat activeIndex berubah
-            sequence={[currentPortfolio.judul, 3000]}
-            wrapper="span"
-            speed={5}
-            style={{ display: "inline-block" }}
-            repeat={Infinity}
-          />
-        </h1>
-
-        <p className="text-sm text-white max-w-xl sm:text-md mt-2">
-          {currentPortfolio.deskripsi}
-        </p>
-
-        <div className="flex items-center justify-center sm:justify-start mt-2">
-          <span className="h-9 rounded-lg flex justify-center text-sm text-primary items-center px-4 py-1">
-            {currentPortfolio.bahasa}
-          </span>
-        </div>
-        <a
-          href={currentPortfolio.github}
-          className="w-full sm:w-1/2 h-9 rounded-full flex justify-center text-sm text-white items-center border border-white hover:scale-105 transition duration-200 mt-4 sm:mt-6 px-6 py-2 mx-auto sm:mx-0"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="max-w-4xl mx-auto px-6 my-10">
+        {/* Animasi Judul */}
+        <motion.h2
+          className="text-3xl font-bold"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { y: -50, opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: "easeOut" },
+            },
+          }}
         >
-          <BsGithub /> <span className="ml-4">Source Code</span>
-        </a>
-      </div>
+          <span className="flex gap-3 mb-3">
+            <BiCodeAlt /> Showcase
+          </span>
+        </motion.h2>
+        <motion.p
+          className="text-lg mb-7 text-gray-400"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { y: 50, opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, delay: 0.3, ease: "easeOut" },
+            },
+          }}
+        >
+          My Project that I have made.
+        </motion.p>
 
-      {/* Tombol Next */}
-      <div className="text-primary text-2xl mt-4 sm:mt-0">
-        <button type="button" className="hover:scale-110" onClick={handleNext}>
-          <BsArrowRightSquareFill />
-        </button>
+        {/* Grid Layout */}
+        <motion.div
+          className="grid gap-4"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gridTemplateRows: "auto",
+            gridTemplateAreas: `
+              "poska poska movie kmeans"
+              "rekta rekta rekta rekta"
+              "splitbill findnation aikmel aikmel"
+            `,
+          }}
+        >
+          {portfolio.map((item, index) => {
+            const area = [
+              "movie",
+              "findnation",
+              "splitbill",
+              "rekta",
+              "kmeans",
+              "aikmel",
+              "poska",
+            ];
+            return (
+              <motion.div
+                key={item.id}
+                className="relative border border-gray-800 rounded-2xl overflow-hidden shadow-lg transform transition duration-300 p-5 h-[300px]"
+                style={{ gridArea: area[index] }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  hidden: { opacity: 0, y: 50 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.8, ease: "easeOut" },
+                  },
+                }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <motion.img
+                  src={item.gambar}
+                  alt={item.judul}
+                  className="w-full h-44 object-cover rounded-lg"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 0.8, ease: "easeOut" },
+                    },
+                  }}
+                />
+                <motion.div
+                  className="py-3"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 0.8, ease: "easeOut" },
+                    },
+                  }}
+                >
+                  <h3 className="text-lg font-bold">{item.judul}</h3>
+                  <p className="text-gray-400 text-sm">{item.title}</p>
+                </motion.div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

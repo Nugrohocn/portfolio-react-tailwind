@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      primary: ["Ubuntu Mono", "monospace"],
+      primary: ["Space Grotesk", "sans-serif"],
     },
     extend: {
       colors: {

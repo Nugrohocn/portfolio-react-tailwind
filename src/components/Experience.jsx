@@ -1,63 +1,154 @@
-import { useState } from "react";
-import { BsArrowRight } from "react-icons/bs";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { BiUser } from "react-icons/bi";
+import ShinyText from "../components/ShinyText";
 
 function Experience() {
-  const [isOpen, setIsOpen] = useState(false); // State untuk toggle dropdown
-
-  const toggleDropdown = () => {
-    setIsOpen((prev) => !prev); // Toggle isOpen secara lebih eksplisit
-  };
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true }); // Animasi hanya aktif sekali saat di-scroll
 
   return (
-    <>
-      <div className="px-4 md:px-8">
-        {" "}
-        {/* Added padding to the left and right */}
-        <h1 className="text-3xl md:text-4xl my-4">My Experience</h1>
-      </div>
+    <motion.div
+      className="w-full  text-white min-h-screen"
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { staggerChildren: 0.5 } },
+      }}
+    >
+      <div className="max-w-4xl mx-auto px-6 mt-16">
+        {/* Animasi Judul */}
+        <motion.h2
+          className="text-3xl font-bold"
+          variants={{
+            hidden: { y: -50, opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, ease: "easeOut" },
+            },
+          }}
+        >
+          <span className="flex gap-3 mb-3">
+            {" "}
+            <BiUser /> Experience
+          </span>
+        </motion.h2>
+        <motion.p
+          className="text-lg mb-7 text-gray-400"
+          variants={{
+            hidden: { y: 30, opacity: 0 },
+            visible: {
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.8, delay: 0.3, ease: "easeOut" },
+            },
+          }}
+        >
+          Navigating diverse environments with adaptability and expertise for
+          holistic solutions.
+        </motion.p>
 
-      <div className="flex flex-col md:flex-row gap-4 h-auto md:h-60 px-4 md:px-8">
-        {" "}
-        {/* Added padding to the left and right */}
-        <div className="w-full md:w-24 h-auto md:h-24 rounded-full px-2 py-2 relative">
-          <img
-            src="img/msd1.png"
-            className="w-full h-full object-cover hover:text-primary"
-            alt="Experience"
-          />
+        <motion.div
+          className="flex flex-col md:flex-row gap-8 h-auto md:h-72 px-6 md:px-4"
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.8, ease: "easeOut" },
+            },
+          }}
+        >
+          {/* Gambar */}
+          <motion.div
+            className="w-full md:w-32 h-auto md:h-32 rounded-full px-3 py-3 relative"
+            variants={{
+              hidden: { opacity: 0, scale: 0.8 },
+              visible: {
+                opacity: 1,
+                scale: 1,
+                transition: { duration: 0.8, ease: "easeOut" },
+              },
+            }}
+          >
+            <img
+              src="img/msd1.png"
+              className="w-full h-full object-cover hover:text-primary"
+              alt="Experience"
+            />
 
-          <div className="flex gap-2 mt-4 md:mt-8">
-            <span className="flex justify-center px-8 py-1 text-xs md:text-sm font-semibold border border-primary rounded-full text-primary">
-              Internship
-            </span>
-            <span className="flex justify-center px-8 py-1 text-xs md:text-sm font-semibold border border-primary rounded-full text-primary">
-              Onsite
-            </span>
-          </div>
+            <motion.div
+              className="flex gap-3 mt-6 md:mt-10"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.8, ease: "easeOut" },
+                },
+              }}
+            >
+              <span className="flex justify-center px-10 py-2 text-sm md:text-base font-semibold border border-primary rounded-full text-primary">
+                Internship
+              </span>
+              <span className="flex justify-center px-10 py-2 text-sm md:text-base font-semibold border border-primary rounded-full text-primary">
+                Onsite
+              </span>
+            </motion.div>
 
-          <div className="mt-2 p-4 rounded-md shadow-md  transition duration-500 w-sm md:w-[450px] ">
-            <div className="text-sm w-full flex flex-col">
-              <div className="text-sm w-full ">
+            <motion.div
+              className="mt-4 p-2 rounded-md shadow-md transition duration-500 w-full md:w-[800px]"
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.8, ease: "easeOut" },
+                },
+              }}
+            >
+              <div className="text-base w-full flex flex-col">
                 <span>
-                  During my internship, I contributed to designing posters and
-                  banners for company marketing programs, developing websites,
-                  and learning and applying SEO techniques for search engine
-                  optimization. In addition, I also manage and improve website
-                  performance to ensure optimal user experience.
+                  As an intern, I contributed to the development of a tourism
+                  recommendation system in Karanganyar Regency using the
+                  Knowledge Base Recommendation method with Laravel.
+                  Additionally, I was involved in SEO optimization through
+                  Google Search Console and wrote articles to enhance the
+                  website’s visibility and search engine ranking.
                 </span>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className=" mt-4 sm:mt-0 ">
-          <h1 className="text-sm md:text-md">Software Engineer</h1>
-          <h1 className="text-lg md:text-2xl font-bold">
-            PT Media Sarana Digitalindo
-          </h1>
-          <span className="text-sm">26 Agustus 2024 - 4 Januari 2025</span>
-        </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Informasi Pekerjaan */}
+          <motion.div
+            className="mt-6 sm:mt-0"
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.8, ease: "easeOut" },
+              },
+            }}
+          >
+            <h1 className="text-md md:text-lg">Software Engineer</h1>
+            <h1 className="text-2xl md:text-2xl font-bold">
+              <ShinyText
+                text="PT Media Sarana Digitalindo"
+                disabled={false}
+                speed={3}
+                className="custom-class"
+              />
+            </h1>
+            <span className="text-md">26 Agustus 2024 - 4 Januari 2025</span>
+          </motion.div>
+        </motion.div>
       </div>
-    </>
+    </motion.div>
   );
 }
 
