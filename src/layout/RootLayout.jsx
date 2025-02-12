@@ -18,8 +18,8 @@ export default function Rootlayout() {
         <Outlet />
       </div>
 
-      {/* Fixed Sidebar Navbar */}
-      <div className="fixed left-20 top-1/2 -translate-y-1/2 text-center z-10">
+      {/* Fixed Sidebar Navbar - Hanya tampil di mode desktop */}
+      <div className="hidden md:flex fixed left-20 top-1/2 -translate-y-1/2 text-center z-10">
         <div className="flex flex-col gap-4 text-white p-2">
           <button
             className="flex w-[50px] h-[50px] justify-center items-center cursor-pointer"

@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
 body {
-  background-color: black;
+  background-color: #0a0a0a;
   overflow-x: hidden;
   @apply font-primary;
 }

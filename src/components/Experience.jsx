@@ -9,7 +9,7 @@ function Experience() {
 
   return (
     <motion.div
-      className="w-full  text-white min-h-screen"
+      className="w-full  text-white "
       ref={ref}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
