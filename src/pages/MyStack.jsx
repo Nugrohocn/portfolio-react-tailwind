@@ -24,7 +24,7 @@ const techStack = [
 const MyStack = () => {
   return (
     <motion.div
-      className="bg-black w-full text-white min-h-screen py-10"
+      className=" container mx-auto max-w-4xl flex flex-wrap lg:flex-nowrap items-center justify-center gap-10 px-5  text-white"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -36,7 +36,7 @@ const MyStack = () => {
         },
       }}
     >
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="w-full mx-auto px-6 my-10 ">
         <motion.h2
           className="text-3xl font-bold mb-3"
           initial={{ y: -50, opacity: 0 }}

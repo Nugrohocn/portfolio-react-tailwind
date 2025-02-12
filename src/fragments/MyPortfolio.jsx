@@ -22,37 +22,28 @@ const MyPortfolio = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full">
-      <div className="w-full text-white" id="home">
+    <div className="px-4 lg:px-8">
+      <div id="home">
         <Home />
       </div>
-      <div className="w-full max-w-full px-4 md:max-w-[870px] border-t border-gray-500 mt-4 mx-auto"></div>
+      <div className="w-[870px] border-t border-gray-500 my-4 mx-auto"></div>
 
-      <div
-        className="w-full text-white min-h-[80vh] md:min-h-screen"
-        id="experience"
-      >
+      <div id="experience">
         <Experience />
       </div>
-      <div className="w-full max-w-full px-4 md:max-w-[870px] border-t border-gray-500 mt-4 mx-auto"></div>
+      <div className="w-[870px] border-t border-gray-500 my-10 mx-auto"></div>
 
-      <div
-        className="w-full text-white min-h-[80vh] md:min-h-screen"
-        id="portfolio"
-      >
+      <div id="portfolio">
         <Portfolio />
       </div>
-      <div className="w-full max-w-full px-4 md:max-w-[870px] border-t border-gray-500 mt-4 mx-auto"></div>
+      <div className="w-[870px] border-t border-gray-500 my-10 mx-auto"></div>
 
-      <div
-        className="w-full text-white min-h-[80vh] md:min-h-screen"
-        id="mystack"
-      >
+      <div id="mystack">
         <MyStack />
       </div>
-      <div className="w-full max-w-full px-4 md:max-w-[870px] border-t border-gray-500 mt-4 mx-auto"></div>
+      <div className="w-[870px] border-t border-gray-500 my-10 mx-auto"></div>
 
-      <p className="text-sm text-white mt-4 text-center px-4">
+      <p className="text-sm text-white text-center px-4 mt-10">
         Copyright © {new Date().getFullYear()} Nur Cahyo Nugroho
       </p>
 

@@ -88,7 +88,7 @@ export default function Portfolio({ onClick }) {
 
   return (
     <motion.div
-      className="w-full text-white min-h-screen "
+      className="container mx-auto max-w-4xl flex flex-wrap lg:flex-nowrap items-center justify-center gap-10 px-5 text-white"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -97,7 +97,7 @@ export default function Portfolio({ onClick }) {
         visible: { opacity: 1, transition: { staggerChildren: 0.5 } },
       }}
     >
-      <div className="max-w-4xl mx-auto px-6 my-10">
+      <div className="w-full mx-auto px-6 my-10">
         {/* Animasi Judul */}
         <motion.h2
           className="text-3xl font-bold"
